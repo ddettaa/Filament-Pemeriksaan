@@ -23,22 +23,8 @@ class EresepDetailResource extends Resource
     {
         return $form
             ->schema([
-
-                Forms\Components\Select::make('id_obat')
-                    ->required()
-                    ->label('Nama Obat')
-                    ->options(function () {
-                        return \App\Models\Obat::pluck('nama_obat', 'id_obat');
-                    })
-                    ->searchable(),
-                Forms\Components\TextInput::make('jumlah')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('aturan_pakai')
-                    ->required()
-                    ->maxLength(100),
-            ]);
                 //
+            ]);
     }
 
     public static function table(Table $table): Table
